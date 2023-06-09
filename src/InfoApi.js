@@ -1,4 +1,4 @@
-let info = [
+export let info = [
   {
     id: 1,
     name: "Anjali Rajpoot",
@@ -13,13 +13,13 @@ let info = [
   },
   {
     id: 3,
-    name: "Golu Rajpoot",
+    name: "Golu",
     profession: "Student",
     email: "golurajpoot0611@gmail.com",
   },
   {
     id: 4,
-    name: "Raavi Rajpoot",
+    name: "Raavi",
     profession: "Student",
     email: "raavirajpoot2612@gmail.com",
   },
