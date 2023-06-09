@@ -12,7 +12,7 @@ const Thanks = () => {
           <Button
             positive
             onClick={() => {
-              navigate("/thanks");
+              navigate("/");
             }}>
             {" "}
             Okk Great !!!

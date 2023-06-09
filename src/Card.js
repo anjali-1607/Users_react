@@ -8,12 +8,14 @@ function AllCards() {
   return (
     <>
       <div className="navbar">
-        <Segment>
+        <Segment style={{ width: "80em" }}>
           <Button secondary icon labelPosition="left">
             <Icon name="all users" />
             All User's
           </Button>
           <Button
+            style={{ marginLeft: "10em" }}
+            floated="right"
             color="green"
             icon
             labelPosition="right"

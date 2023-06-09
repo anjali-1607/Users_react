@@ -10,7 +10,6 @@ function App() {
         <Route path="/" element={<AllCard />} />
         <Route path="/add" element={<UserForm />} />
         <Route path="/form" element={<Thanks />} />
-        <Route path="/thanks" element={<AllCard />} />
       </Routes>
     </Router>
   );
