@@ -3,15 +3,20 @@ import "./App.css";
 import { Button, Checkbox, Form, Segment } from "semantic-ui-react";
 import { useNavigate } from "react-router-dom";
 
-const UserForm = () => {
+const UserForm = ({ FormValues = () => {} }) => {
   const navigate = useNavigate("/");
   const [data, setData] = useState({});
-  console.log(data);
+  // console.log(data);
+
+  const onsubmit = () => {
+    FormValues(data);
+    navigate("/");
+  };
   return (
     <>
       <div className="form">
         <Segment className="form_segment">
-          <Form onsubmit="return validateForm()" method="post">
+          <Form>
             <Form.Field required>
               <label>Full Name</label>
               <input
@@ -56,8 +61,9 @@ const UserForm = () => {
               secondary
               type="submit"
               onClick={() => {
-                navigate("/form");
-              }}>
+                onsubmit();
+              }}
+            >
               Add
             </Button>
           </Form>

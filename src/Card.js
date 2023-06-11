@@ -1,36 +1,26 @@
 import { useNavigate, useNavigation } from "react-router-dom";
 import "./App.css";
-import { info } from "./InfoApi";
-import { Button, Icon, Card, Segment } from "semantic-ui-react";
 
-function AllCards() {
+import { Button, Icon, Card, Segment } from "semantic-ui-react";
+import { useState } from "react";
+
+function AllCards({ infodata }) {
   const navigate = useNavigate("/");
+
   return (
     <>
-      <div className="navbar">
-        <Segment style={{ width: "80em" }}>
-          <Button secondary icon labelPosition="left">
-            <Icon name="all users" />
-            All User's
-          </Button>
-          <Button
-            style={{ marginLeft: "10em" }}
-            floated="right"
-            color="green"
-            icon
-            labelPosition="right"
-            onClick={() => {
-              navigate("/add");
-            }}>
-            Add User's
-            <Icon name="add users" />
-          </Button>
-        </Segment>
-      </div>
-
-      <div className="card">
+      <div
+        style={{
+          display: "flex",
+          // margin: "1em 1em 1em 5em",
+          margin: "2em",
+          alignItems: "center",
+          justifyContent: "center",
+          // display: "flex",
+        }}
+      >
         <Card.Group>
-          {info.map((ele) => {
+          {infodata?.map((ele) => {
             return (
               <Card>
                 <Card.Content>

@@ -1,15 +1,12 @@
-import AllCard from "./Card";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import UserForm from "./UserForm";
-import Thanks from "./Thanks";
+import Main from "./Main";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<AllCard />} />
-        <Route path="/add" element={<UserForm />} />
-        <Route path="/form" element={<Thanks />} />
+        <Route path="/" element={<Main />} />
+        <Route path="/:name" element={<Main />} />
       </Routes>
     </Router>
   );
